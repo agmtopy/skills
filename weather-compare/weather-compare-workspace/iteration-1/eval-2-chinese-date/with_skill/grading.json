@@ -1,0 +1,22 @@
+{
+  "pass_rate": 1.0,
+  "passed": 3,
+  "total": 3,
+  "expectations": [
+    {
+      "text": "输出应包含北京和上海两个城市的天气信息",
+      "passed": true,
+      "evidence": "Expected: ['北京', '上海']"
+    },
+    {
+      "text": "输出应包含正确的日期范围（04-20至04-25）",
+      "passed": true,
+      "evidence": "Expected: 04-20"
+    },
+    {
+      "text": "输出应包含天气数据和温度信息",
+      "passed": true,
+      "evidence": "Expected: \\d+°"
+    }
+  ]
+}

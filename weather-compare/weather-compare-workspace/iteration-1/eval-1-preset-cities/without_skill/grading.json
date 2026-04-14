@@ -1,0 +1,27 @@
+{
+  "pass_rate": 0.5,
+  "passed": 2,
+  "total": 4,
+  "expectations": [
+    {
+      "text": "输出应包含伊宁、库尔德宁、赛里木湖三个城市的天气信息",
+      "passed": true,
+      "evidence": "Expected: ['伊宁', '库尔德宁', '赛里木湖']"
+    },
+    {
+      "text": "输出应包含正确的日期范围（04-17至04-21）",
+      "passed": true,
+      "evidence": "Expected: 04-17"
+    },
+    {
+      "text": "输出应包含三个数据源：官方气象台、ECMWF、GFS",
+      "passed": false,
+      "evidence": "Expected: ['中央气象台', 'ECMWF', 'GFS']"
+    },
+    {
+      "text": "输出应包含天气对比表格格式",
+      "passed": false,
+      "evidence": "Expected: 智能天气对比查询"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "pass_rate": 1.0,
+  "passed": 4,
+  "total": 4,
+  "expectations": [
+    {
+      "text": "输出应包含重庆和武汉两个城市的天气信息",
+      "passed": true,
+      "evidence": "Expected: ['重庆', '武汉']"
+    },
+    {
+      "text": "输出应包含正确的日期范围（05-01至05-05）",
+      "passed": true,
+      "evidence": "Expected: 05-01"
+    },
+    {
+      "text": "输出应显示地理编码查询过程（或已包含天气数据）",
+      "passed": true,
+      "evidence": "Expected: ['查询', '重庆', '武汉', '05-01']"
+    },
+    {
+      "text": "输出应包含天气数据",
+      "passed": true,
+      "evidence": "Expected: \\d+°"
+    }
+  ]
+}

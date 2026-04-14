@@ -1,0 +1,31 @@
+{
+  "eval_id": 4,
+  "eval_name": "auto-geocode",
+  "prompt": "我计划5月1日到5月5日去重庆和武汉，帮我查查天气",
+  "assertions": [
+    {
+      "name": "contains_two_cities",
+      "description": "输出应包含重庆和武汉两个城市的天气信息",
+      "check_type": "contains_all",
+      "expected": ["重庆", "武汉"]
+    },
+    {
+      "name": "correct_date_range",
+      "description": "输出应包含正确的日期范围（05-01至05-05）",
+      "check_type": "contains",
+      "expected": "05-01"
+    },
+    {
+      "name": "geocoding_success",
+      "description": "输出应显示地理编码查询过程（或已包含天气数据）",
+      "check_type": "contains_any",
+      "expected": ["查询", "重庆", "武汉", "05-01"]
+    },
+    {
+      "name": "weather_data_present",
+      "description": "输出应包含天气数据",
+      "check_type": "regex_match",
+      "expected": "\\d+°"
+    }
+  ]
+}
