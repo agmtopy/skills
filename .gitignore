@@ -51,3 +51,15 @@ htmlcov/
 # Temporary files
 *.tmp
 *.bak
+
+# Test and comparison files
+**/test_*.py
+**/verify_*.py
+**/create_benchmark.py
+**/evaluate_tests.py
+**/*_test.py
+**/REPAIR_SUMMARY.md
+
+# Workspace comparison directories
+**/*-workspace/
+**/workspace/
