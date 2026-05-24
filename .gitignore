@@ -63,3 +63,4 @@ htmlcov/
 # Workspace comparison directories
 **/*-workspace/
 **/workspace/
+.claude/
