@@ -274,7 +274,11 @@ def convert_numbers_in_text(text):
 
 
 def convert_all(text):
-    result = convert_numbers_in_text(text)
+    # 清理系统 artifacts（如 </parameter>、<parameter name= 等 XML 标签残留）
+    result = re.sub(r'</?parameter[^>]*>', '', text)
+    # 也处理不完整的标签（如 </parameter 或 <parameter name=）
+    result = re.sub(r'</?parameter\s*[^>]*', '', result)
+    result = convert_numbers_in_text(result)
     result = convert_light_tone(result)
     return result
 
